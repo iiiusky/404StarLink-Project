@@ -7,9 +7,13 @@ on:
 
 jobs:
   sync:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: anatawa12/fork-sync-all-branches@v1
+      - uses: tgymnich/fork-sync@v1.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: iiiusky
+          base: master
+          head: master
